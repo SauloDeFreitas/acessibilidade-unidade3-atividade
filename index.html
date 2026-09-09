@@ -8,7 +8,7 @@
   * { box-sizing: border-box;  margin: 0px; padding: 0px;}
   body { margin:0; font-family: system-ui, "Segoe UI", Arial, sans-serif; color:#1c1c1e; background:#f6f6f8; line-height:1.55; }
   .wrap { max-width: 1040px; margin: 0 auto; background:#fff; }
-  #topo { background:#1f2a44; color:#fff; padding:18px 24px; display: grid; grid-template-columns: 1fr 1fr; & sub{grid-column: 1;} & a{grid-column: 2; grid-row: 1; display: flex; justify-content: end; margin: 15px 10px 0px 0px;}}
+  #topo { background:#1f2a44; color:#fff; padding:18px 24px; display: grid; grid-template-columns: 1fr 1fr; & sub{grid-column: 1;} & a{grid-column: 2; grid-row: 1; display: flex; justify-content: end; margin-right: 10px;}}
   .titulo-principal { font-size: 30px; font-weight: 800; letter-spacing:-.5px; }
   .subtitulo { color:#b9c4de; font-size:14px; }
   #menu { 
@@ -44,8 +44,8 @@
   .cab { background:#eef0f5; font-weight:700; }
   input[type=text], input[type=email], input[type=password] { width:100%; padding:9px; border:1px solid #c3c9d6; border-radius:5px; margin-bottom:12px; font-size:14px; }
   .erro { color:#c0392b; font-size:13px; margin:-6px 0 12px; }
-  #rodape { background:#1f2a44; color:#b9c4de; padding:20px 24px; font-size:13px; margin-top:10px; }
-  #rodape a { color:#dbe2f2; }
+  #rodape { background:#1f2a44; color:#b9c4de; padding:20px 24px; font-size:13px; margin-top:10px; & ul{display: flex; gap: 20px; & li{padding: 5px;}} }
+  #rodape a { color:#dbe2f2;}
   .aviso { background:#fff8e1; border:1px solid #f0dfa8; padding:12px 14px; border-radius:6px; font-size:14px; }
 </style>
 </head>
@@ -213,9 +213,12 @@
 </main>
 
 <footer id="rodape">
-  Harmonia Instrumentos Musicais &bull; CNPJ 00.000.000/0001-00 &bull;
-  <a href="termos.html">Termos de uso</a> &bull;
-  <a href="privacidade.html">Privacidade</a>
+  <ul>
+    <li>Harmonia Instrumentos Musicais</li>
+    <li>CNPJ 00.000.000/0001-00</li>
+    <li><a href="termos.html">Termos de uso</a></li>
+    <li><a href="privacidade.html">Privacidade</a></li>
+  </ul>
 </footer>
 
 </div>
