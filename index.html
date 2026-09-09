@@ -177,9 +177,9 @@
     <form action="/enviar" method="post">
 
       <h3 style="font-weight:600; margin:14px 0 6px;">Nome completo *</h3>
-      <input type="text" id="nome" placeholder="Digite seu nome completo">
+      <input type="text" id="nome" placeholder="Digite seu nome completo" required >
 
-      <input type="email" id="email" placeholder="E-mail *">
+      <input type="email" id="email" placeholder="E-mail *" required>
       <div class="erro">Erro.</div>
 
       <h3>Telefone</h3>
@@ -190,16 +190,22 @@
 
       <h3 style="font-weight:600; margin:14px 0 6px;">Turno preferido para contato *</h3>
       <div>
-        <input type="radio" name="turno" id="manha" value="manha"> Manhã<br>
-        <input type="radio" name="turno" id="tarde" value="tarde"> Tarde<br>
-        <input type="radio" name="turno" id="noite" value="noite"> Noite
+        <label for="manha">Manhã</label>
+        <input type="radio" name="turno" id="manha" value="manha" required>
+        <label for="tarde">Tarde</label>
+        <input type="radio" name="turno" id="tarde" value="tarde" required>
+        <label for="noite">Noite</label>
+        <input type="radio" name="turno" id="noite" value="noite" required>
       </div>
 
       <h3 style="font-weight:600; margin:14px 0 6px;">Assuntos de interesse</h3>
       <div>
-        <input type="checkbox" name="int" id="i1"> Guitarras<br>
-        <input type="checkbox" name="int" id="i2"> Baterias<br>
-        <input type="checkbox" name="int" id="i3"> Teclados
+        <label>Guitarras</label>
+        <input type="checkbox" name="int" id="i1"> 
+        <label>Baterias</label>
+        <input type="checkbox" name="int" id="i2">
+        <label>Teclados</label>
+        <input type="checkbox" name="int" id="i3">
       </div>
 
       <button href="#" onclick="enviarFormulario()" class="botao">Enviar</button>
