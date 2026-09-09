@@ -11,6 +11,8 @@
   #topo { background:#1f2a44; color:#fff; padding:18px 24px; display: grid; grid-template-columns: 1fr 1fr; & sub{grid-column: 1;} & a{grid-column: 2; grid-row: 1; display: flex; justify-content: end; margin-right: 10px;}}
   .titulo-principal { font-size: 30px; font-weight: 800; letter-spacing:-.5px; }
   .subtitulo { color:#b9c4de; font-size:14px; }
+  #periodo {display: grid; width: 0px; grid-template-columns: 1fr 1fr; grid-column-gap:10px;grid-row-gap:10px;}
+  #assunto {display: grid; width: 0px; grid-template-columns: 1fr 1fr; grid-column-gap:10px;grid-row-gap:10px;}
   #menu { 
     background:#2c3a5e; 
     padding:10px 24px;
@@ -182,23 +184,23 @@
       <div class="erro">Erro.</div>
 
       <h3 style="font-weight:600; margin:14px 0 6px;">Turno preferido para contato *</h3>
-      <div>
-        <label for="manha">Manhã</label>
+      <div id="periodo">
         <input type="radio" name="turno" id="manha" value="manha" required>
-        <label for="tarde">Tarde</label>
+        <label for="manha">Manhã</label>
         <input type="radio" name="turno" id="tarde" value="tarde" required>
-        <label for="noite">Noite</label>
+        <label for="tarde">Tarde</label>
         <input type="radio" name="turno" id="noite" value="noite" required>
+        <label for="noite">Noite</label>
       </div>
 
       <h3 style="font-weight:600; margin:14px 0 6px;">Assuntos de interesse</h3>
-      <div>
+      <div id="assunto">
+        <input type="checkbox" name="int" id="i1">
         <label>Guitarras</label>
-        <input type="checkbox" name="int" id="i1"> 
-        <label>Baterias</label>
         <input type="checkbox" name="int" id="i2">
-        <label>Teclados</label>
+        <label>Baterias</label>
         <input type="checkbox" name="int" id="i3">
+        <label>Teclados</label>
       </div>
 
       <button href="#" onclick="enviarFormulario()" class="botao">Enviar</button>
