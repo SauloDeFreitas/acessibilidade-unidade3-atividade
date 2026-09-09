@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Harmonia Instrumentos Musicais</title>
 <style>
-  * { box-sizing: border-box; }
+  * { box-sizing: border-box;  margin: 0px; padding: 0px;}
   body { margin:0; font-family: system-ui, "Segoe UI", Arial, sans-serif; color:#1c1c1e; background:#f6f6f8; line-height:1.55; }
   .wrap { max-width: 1040px; margin: 0 auto; background:#fff; }
-  #topo { background:#1f2a44; color:#fff; padding:18px 24px; }
+  #topo { background:#1f2a44; color:#fff; padding:18px 24px; display: grid; grid-template-columns: 1fr 1fr; & sub{grid-column: 1;} & a{grid-column: 2; grid-row: 1; display: flex; justify-content: end; margin: 15px 10px 0px 0px;}}
   .titulo-principal { font-size: 30px; font-weight: 800; letter-spacing:-.5px; }
   .subtitulo { color:#b9c4de; font-size:14px; }
   #menu { 
@@ -54,24 +54,12 @@
 <div class="wrap">
 
 <header>
-  <table class="layout" width="100%">
-    <tr>
-    <td>
-      <div id="topo">
-        <table class="layout" width="100%">
-          <tr>
-            <td>
-              <h1 class="titulo-principal">Harmonia Instrumentos Musicais</h1>
-              <sub class="subtitulo">Tudo para o seu som desde 1998</sub>
-            </td>
-            <td align="right">
-              <a href="carrinho.html"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%229%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Cpath%20d%3D%22M1.5%202h3l2.7%2012.4a2%202%200%200%200%202%201.6h8.1a2%202%200%200%200%202-1.6L21%206H6%22%2F%3E%3C%2Fsvg%3E" width="34" height="34" alt="Acessar o carrinho de compras da loja"></a>
-            </td>
-          </tr>
-        </table>
-      </div>
-
-     <nav>
+    <div id="topo">
+        <h1 class="titulo-principal">Harmonia Instrumentos Musicais</h1>
+        <sub class="subtitulo">Tudo para o seu som desde 1998</sub>
+        <a role="button" href="carrinho.html"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%229%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Cpath%20d%3D%22M1.5%202h3l2.7%2012.4a2%202%200%200%200%202%201.6h8.1a2%202%200%200%200%202-1.6L21%206H6%22%2F%3E%3C%2Fsvg%3E" width="34" height="34" alt="Acessar o carrinho de compras da loja"></a>
+    </div>
+    <nav>
        <ul id="menu">
           <li><a href="index.html">Início</a></li>
           <li><a href="guitarras.html">Guitarras</a></li>
@@ -83,10 +71,7 @@
         <div id="trilha">
           <a href="index.html">Início</a> &gt; <a href="guitarras.html">Guitarras</a> &gt; Guitarras Elétricas
         </div>
-     </nav>
-    </td>
-    </tr>
-  </table>
+    </nav>
 </header>
 
 <main id="miolo">
@@ -144,30 +129,34 @@
     <h2>Comparativo de modelos</h2>
 
     <table>
-      <tr>
-        <td class="cab">Modelo</td>
-        <td class="cab">Captadores</td>
-        <td class="cab">Escala</td>
-        <td class="cab">Preço</td>
-      </tr>
-      <tr>
-        <td class="cab">Stratocaster HSS</td>
-        <td>2 single + 1 humbucker</td>
-        <td>648 mm</td>
-        <td>R$ 4.290,00</td>
-      </tr>
-      <tr>
-        <td class="cab">Les Paul Standard</td>
-        <td>2 humbuckers</td>
-        <td>628 mm</td>
-        <td>R$ 7.150,00</td>
-      </tr>
-      <tr>
-        <td class="cab">Telecaster Vintage</td>
-        <td>2 single coil</td>
-        <td>648 mm</td>
-        <td>R$ 3.980,00</td>
-      </tr>
+      <thead>
+        <tr>
+          <th class="cab">Modelo</th>
+          <th class="cab">Captadores</th>
+          <th class="cab">Escala</th>
+          <th class="cab">Preço</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cab">Stratocaster HSS</td>
+          <td>2 single + 1 humbucker</td>
+          <td>648 mm</td>
+          <td>R$ 4.290,00</td>
+        </tr>
+        <tr>
+          <td class="cab">Les Paul Standard</td>
+          <td>2 humbuckers</td>
+          <td>628 mm</td>
+          <td>R$ 7.150,00</td>
+        </tr>
+        <tr>
+          <td class="cab">Telecaster Vintage</td>
+          <td>2 single coil</td>
+          <td>648 mm</td>
+          <td>R$ 3.980,00</td>
+        </tr>
+      </tbody>
     </table>
 
     <h2>Fale com um vendedor</h2>
