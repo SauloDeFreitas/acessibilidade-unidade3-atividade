@@ -6,6 +6,33 @@
 <title>Harmonia Instrumentos Musicais</title>
 <style>
   * { box-sizing: border-box;  margin: 0px; padding: 0px;}
+  :root{
+    --cor-fundo-drkmd: #41424C;
+    color-scheme: light dark;
+  }
+
+  @media (prefers-color-scheme: dark){
+    html{
+      background-color: var(--cor-fundo-drkmd);
+    }
+  }
+
+  #containerBotaoDarkMode{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+
+  #darkModeBtn{
+    width: 50px;
+    height: 50px;
+    background-color: darkblue;
+    border: none;
+    border-radius: 50px;
+    margin-right: 2%;
+    margin-top: 1%;
+  }
+
   .skpLink{
     font-size: 0px;
     display: inline-block;
@@ -71,6 +98,14 @@
   .aviso { background:#fff8e1; border:1px solid #f0dfa8; padding:12px 14px; border-radius:6px; font-size:14px; }
   header{background-color:#1f2a44;}
 </style>
+<script>
+  function mudarDarkMode(){
+    const main = document.getElementById("miolo");
+
+    main.style.colorScheme = 'dark';
+    console.log("AAA")
+  }
+</script>
 </head>
 <body>
 
@@ -80,6 +115,9 @@
     <a class="skpLink" id="skpLinkConteudo" href="#nomeCliente">Falar com um vendedor</a>
 </div>
 <header>
+    <div id="containerBotaoDarkMode">
+      <button id="darkModeBtn" onclick="mudarDarkMode()"></button>
+    </div>
     <div id="topo">
         <h1 class="titulo-principal">Harmonia Instrumentos Musicais</h1>
         <sub class="subtitulo">Tudo para o seu som desde 1998</sub>
