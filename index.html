@@ -7,13 +7,14 @@
 <style>
   * { box-sizing: border-box;  margin: 0px; padding: 0px;}
   :root{
-    --cor-fundo-drkmd: #41424C;
-    color-scheme: light dark;
+    --cor-fundo: white;
+     --cor-main: white;
   }
 
   @media (prefers-color-scheme: dark){
-    html{
-      background-color: var(--cor-fundo-drkmd);
+    :root{
+      --cor-fundo: #41424C;
+      --cor-main: #41424C;
     }
   }
 
@@ -46,7 +47,7 @@
     font-size: 15px; 
     border: 1.5px solid black;
   }
-  body { margin:0; font-family: system-ui, "Segoe UI", Arial, sans-serif; color:#1c1c1e; background:#f6f6f8; line-height:1.55; }
+  body { margin:0; font-family: system-ui, "Segoe UI", Arial, sans-serif; color:#1c1c1e; background:var(--cor-fundo); line-height:1.55; }
   .wrap { max-width: 1040px; margin: 0 auto; background:#fff; }
   .listaInstrumentos{ margin-left: 2.5%;}
   #topo { background:#1f2a44; color:#fff; padding:18px 24px; display: grid; grid-template-columns: 1fr 1fr;}
@@ -75,7 +76,7 @@
   #trilha ul{display: flex; gap:4px;}
   #trilha ul li{list-style: none;}
   #trilha a { color:#5b6478; }
-  #miolo { display:flex; gap:28px; padding:24px; align-items:flex-start; }
+  #miolo { display:flex; gap:28px; padding:24px; align-items:flex-start; background-color: var(--cor-main); }
   #conteudo { flex:1 1 auto; min-width:0; }
   .lateral { flex:0 0 250px; background:#f2f4f9; border:1px solid #e0e4ee; padding:16px; border-radius:8px; font-size:14px; }
   .h1-falso { font-size:28px; font-weight:800; margin:0 0 6px; }
@@ -98,14 +99,6 @@
   .aviso { background:#fff8e1; border:1px solid #f0dfa8; padding:12px 14px; border-radius:6px; font-size:14px; }
   header{background-color:#1f2a44;}
 </style>
-<script>
-  function mudarDarkMode(){
-    const main = document.getElementById("miolo");
-
-    main.style.colorScheme = 'dark';
-    console.log("AAA")
-  }
-</script>
 </head>
 <body>
 
@@ -115,9 +108,6 @@
     <a class="skpLink" id="skpLinkConteudo" href="#nomeCliente">Falar com um vendedor</a>
 </div>
 <header>
-    <div id="containerBotaoDarkMode">
-      <button id="darkModeBtn" onclick="mudarDarkMode()"></button>
-    </div>
     <div id="topo">
         <h1 class="titulo-principal">Harmonia Instrumentos Musicais</h1>
         <sub class="subtitulo">Tudo para o seu som desde 1998</sub>
