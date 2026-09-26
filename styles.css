@@ -51,6 +51,25 @@
     }
   }
 
+  /*Desabilitando transições*/
+  @media (prefers-reduced-motion: reduce) {
+    #banner{
+      transition: none;
+    }
+
+    .carrossel{
+      transition: none;
+    }
+
+    .slides{
+      transition: none;
+
+      & img{
+        transition: none;
+      }
+    }
+  }
+
   .botaoCarrossel{
     width: 30px;
     height: 30px;
