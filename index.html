@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Harmonia Instrumentos Musicais</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
 </head>
 <body>
 
@@ -43,7 +44,7 @@
 
   <div id="conteudo">
     <section>
-      <img id="banner" src="./imgs/banner.webp">
+      <img id="banner" src="./imgs/banner.jpeg">
     </section>
 
     <h1 class="h1-falso">Loja de Instrumentos</h1>
@@ -64,19 +65,35 @@
 
     <h2>Guitarras Elétricas</h2>
 
-    <form class="cartao">
-      <strong>Stratocaster HSS</strong>
-      <p>Preço</p>
-      <p>R$ 4.290,00</p>
-      <button class="botao" onclick="adicionarCarrinho(101)">Adicionar ao carrinho</button>
-    </form>
+    <section class="carrossel">
+      <div id="slides" class="slides">
+        <form id="01" class="cartao">
+          <strong>Stratocaster HSS</strong>
+          <img src="imgs/01img.jpeg">
+          <p>Preço</p>
+          <p>R$ 4.290,00</p>
+          <button class="botao" onclick="adicionarCarrinho(101)">Adicionar ao carrinho</button>
+        </form>
 
-    <form class="cartao">
-      <strong>Les Paul Standard</strong>
-      <p>Preço</p>
-      <p>R$ 4.290,00</p>
-      <button class="botao" onclick="adicionarCarrinho(102)">Adicionar ao carrinho</button>
-    </form>
+        <form id="02" class="cartao">
+          <strong>Les Paul Standard</strong>
+          <img src="imgs/02img.jpeg">
+          <p>Preço</p>
+          <p>R$ 4.290,00</p>
+          <button class="botao" onclick="adicionarCarrinho(102)">Adicionar ao carrinho</button>
+        </form>
+
+        <form id="03" class="cartao">
+          <strong>Fender Stratocaster Jimy Hendrix</strong>
+          <img src="imgs/03img.jpeg">
+          <p>Preço</p>
+          <p>R$ 4.290,00</p>
+          <button class="botao" onclick="adicionarCarrinho(102)">Adicionar ao carrinho</button>
+        </form>
+      </div>
+      <button onclick="moverCarrosselDireita()" class="botaoCarrossel esquerda"><</button>
+      <button onclick="moverCarrosselEsquerda()" class="botaoCarrossel direita">></button>
+    </section>
 
     <h2>Baterias</h2>
 
