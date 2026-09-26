@@ -40,6 +40,17 @@
     }
   }
 
+  #banner{
+    transition: 1.5s ease ;
+    opacity: 1;
+  }
+
+  @starting-style{
+    #banner{
+      opacity: 0;
+    }
+  }
+
   .botaoCarrossel{
     width: 30px;
     height: 30px;
