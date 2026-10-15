@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro Acessível</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="bodyContato">
+    <main id="mainContato">
+        <form>
+            <h1>Formulário de Contato</h1>
+            <label>Nome Completo</label>
+            <input type="text" required>
+            <label>E-mail</label>
+            <input type="email" required>
+            <label>CPF</label>
+            <input type="number" required>
+            <label>Data de Nascimento</label>
+            <input type="date" required>
+            <label>Telefone</label>
+            <input type="tel">
+            <label>Senha</label>
+            <input type="password">
+            <label>Confirmação da Senha</label>
+            <input type="password">
+            <div id="divisaoGeneroForm">
+                <h1>Gênero</h1>
+                <label for="masculino">Masculino</label>
+                <input id="masculino" type="radio" name="genero">
+                <label for="feminino">Feminino</label>
+                <input id="feminino" type="radio" name="genero">
+            </div>
+            <label>Interesses</label>
+            <label>x</label>
+            <input type="checkbox">
+            <label>y</label>
+            <input type="checkbox">
+            <label>z</label>
+            <input type="checkbox">
+
+            <label>Como Conheceu o Site</label>
+            <select>
+                <option></option>
+            </select>
+            <label>Aceite os Termos</label>
+            <input type="checkbox" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+</html>
