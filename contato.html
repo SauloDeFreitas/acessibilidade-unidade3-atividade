@@ -7,23 +7,47 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body id="bodyContato">
+    <header>
+        <div id="topo">
+            <h1 class="titulo-principal">Harmonia Instrumentos Musicais</h1>
+            <sub class="subtitulo">Tudo para o seu som desde 1998</sub>
+            <a  role="button" href="carrinho.html"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%229%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%2218%22%20cy%3D%2220%22%20r%3D%221.4%22%2F%3E%3Cpath%20d%3D%22M1.5%202h3l2.7%2012.4a2%202%200%200%200%202%201.6h8.1a2%202%200%200%200%202-1.6L21%206H6%22%2F%3E%3C%2Fsvg%3E" width="34" height="34" alt="Acessar o carrinho de compras da loja"></a>
+        </div>
+        <nav>
+        <ul id="menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="guitarras.html">Guitarras</a></li>
+            <li><a href="baterias.html">Baterias</a></li>
+            <li><a href="teclados.html">Teclados</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            </ul>
+
+            <div id="trilha">
+            <ul>
+                <li><a href="index.html">Início</a> &gt; </li> 
+                <li><a href="guitarras.html">Guitarras</a> &gt; </li>
+                <li>Guitarras Elétricas</li>
+            </ul>
+            </div>
+        </nav>
+    </header>
     <main id="mainContato">
         <form>
             <h1>Formulário de Contato</h1>
-            <label>Nome Completo</label>
-            <input type="text" required>
-            <label>E-mail</label>
-            <input type="email" required>
-            <label>CPF</label>
-            <input type="number" required>
-            <label>Data de Nascimento</label>
-            <input type="date" required>
-            <label>Telefone</label>
-            <input type="tel">
-            <label>Senha</label>
-            <input type="password">
-            <label>Confirmação da Senha</label>
-            <input type="password">
+            <label for="nomeContato">Nome Completo</label>
+            <input id="nomeContato" type="text" required>
+            <label for="emailContato">E-mail</label>
+            <input id="emailContato" type="email" required>
+            <label for="cpfContato">CPF</label>
+            <input id="cpfContato" type="number" required>
+            <label for="dataContato">Data de Nascimento</label>
+            <input id="dataContato" type="date" required>
+            <label for="telefoneContato">Telefone</label>
+            <input id="telefoneContato" type="tel">
+            <label for="senhaContato">Senha</label>
+            <input id="senhaContato" type="password">
+            <label for="confSenhaContato">Confirmação da Senha</label>
+            <input id="confSenhaContato" type="password">
             <div id="divisaoGeneroForm">
                 <h1>Gênero</h1>
                 <label for="masculino">Masculino</label>
@@ -31,20 +55,28 @@
                 <label for="feminino">Feminino</label>
                 <input id="feminino" type="radio" name="genero">
             </div>
-            <label>Interesses</label>
-            <label>x</label>
-            <input type="checkbox">
-            <label>y</label>
-            <input type="checkbox">
-            <label>z</label>
-            <input type="checkbox">
+            <div id="divInteresses">
+                <h1>Interesses</h1>
+                <label>x</label>
+                <input type="checkbox">
+                <label>y</label>
+                <input type="checkbox">
+                <label>z</label>
+                <input type="checkbox">
+            </div>
 
-            <label>Como Conheceu o Site</label>
+            <h1>Como Conheceu o Site</h1>
             <select>
-                <option></option>
+                <option>Pesquisa no Google (ou outros buscadores)</option>
+                <option>Redes Sociais (Instagram, TikTok, Facebook, LinkedIn)</option>
+                <option>Indicação de amigos ou familiares (Boca a boca)</option>
+                <option>Anúncios na internet (Propagandas em sites ou apps)</option>
+                <option>Outros</option>
             </select>
-            <label>Aceite os Termos</label>
-            <input type="checkbox" required>
+            <div id="divAceiteTermos">
+                <label for="aceiteTermos">Aceite os Termos</label>
+                <input id="aceiteTermos" type="checkbox" required>
+            </div>
 
             <button type="submit">Enviar</button>
         </form>
