@@ -25,61 +25,93 @@
             <div id="trilha">
             <ul>
                 <li><a href="index.html">Início</a> &gt; </li> 
-                <li><a href="guitarras.html">Guitarras</a> &gt; </li>
-                <li>Guitarras Elétricas</li>
+                <li><a href="contato.html">Contato</a> &gt; </li>
             </ul>
             </div>
         </nav>
     </header>
     <main id="mainContato">
         <form>
-            <h1>Formulário de Contato</h1>
-            <label for="nomeContato">Nome Completo</label>
-            <input id="nomeContato" type="text" required>
-            <label for="emailContato">E-mail</label>
-            <input id="emailContato" type="email" required>
-            <label for="cpfContato">CPF</label>
-            <input id="cpfContato" type="number" required>
-            <label for="dataContato">Data de Nascimento</label>
-            <input id="dataContato" type="date" required>
-            <label for="telefoneContato">Telefone</label>
-            <input id="telefoneContato" type="tel">
-            <label for="senhaContato">Senha</label>
-            <input id="senhaContato" type="password">
-            <label for="confSenhaContato">Confirmação da Senha</label>
-            <input id="confSenhaContato" type="password">
-            <div id="divisaoGeneroForm">
-                <h1>Gênero</h1>
+            <fieldset id="divDadosContato">
+                <legend>Formulário de Contato</legend>
+                <div class="campo">
+                    <label for="nomeContato">Nome Completo</label>
+                    <input id="nomeContato" type="text" required>
+                    <p class="erro" id="erroNome"></p>
+                </div>
+                <div class="campo">
+                    <label for="emailContato">E-mail</label>
+                    <input id="emailContato" type="email" required>
+                    <p class="erro" id="erroEmail"></p>
+                </div>
+                <div class="campo">
+                    <label for="cpfContato">CPF</label>
+                    <input id="cpfContato" type="number" required>
+                    <p class="erro" id="erroCpf"></p>
+                </div>
+                <div class="campo">
+                    <label for="dataContato">Data de Nascimento</label>
+                    <input id="dataContato" type="date" required>
+                    <p class="erro" id="erroNascimento"></p>
+                </div>
+                <div class="campo">
+                    <label for="telefoneContato">Telefone</label>
+                    <input id="telefoneContato" type="tel">
+                    <p class="erro" id="erroTelefone"></p>
+                </div>
+                <div class="campo">
+                    <label for="senhaContato">Senha</label>
+                    <input id="senhaContato" type="password">
+                    <p class="erro" id="erroSenha"></p>
+                </div>
+                <div class="campo">
+                    <label for="confSenhaContato">Confirmação da Senha</label>
+                    <input id="confSenhaContato" type="password">
+                    <p class="erro" id="erroSenhaConf"></p>
+                </div>
+            </fieldset>
+            <fieldset id="divisaoGeneroForm">
                 <label for="masculino">Masculino</label>
                 <input id="masculino" type="radio" name="genero">
                 <label for="feminino">Feminino</label>
                 <input id="feminino" type="radio" name="genero">
-            </div>
-            <div id="divInteresses">
-                <h1>Interesses</h1>
+            </fieldset>
+            <fieldset id="divInteresses">
+                <legend>Interesses</legend>
                 <label>x</label>
                 <input type="checkbox">
                 <label>y</label>
                 <input type="checkbox">
                 <label>z</label>
                 <input type="checkbox">
-            </div>
+            
+                <legend>Como Conheceu o Site</legend>
+                <select>
+                    <option>Pesquisa no Google (ou outros buscadores)</option>
+                    <option>Redes Sociais (Instagram, TikTok, Facebook, LinkedIn)</option>
+                    <option>Indicação de amigos ou familiares (Boca a boca)</option>
+                    <option>Anúncios na internet (Propagandas em sites ou apps)</option>
+                    <option>Outros</option>
+                </select>
 
-            <h1>Como Conheceu o Site</h1>
-            <select>
-                <option>Pesquisa no Google (ou outros buscadores)</option>
-                <option>Redes Sociais (Instagram, TikTok, Facebook, LinkedIn)</option>
-                <option>Indicação de amigos ou familiares (Boca a boca)</option>
-                <option>Anúncios na internet (Propagandas em sites ou apps)</option>
-                <option>Outros</option>
-            </select>
-            <div id="divAceiteTermos">
+                <label for="mensagemContato">Mensagem</label>
+                <textarea id="mensagemContato">
+
+                </textarea>
+            </fieldset>
+            <fieldset id="divAceiteTermos">
                 <label for="aceiteTermos">Aceite os Termos</label>
                 <input id="aceiteTermos" type="checkbox" required>
-            </div>
+            </fieldset>
 
             <button type="submit">Enviar</button>
         </form>
+        <aside class="lateral">
+            <div style="font-weight:700; margin-bottom:8px;">Conteúdo relacionado</div>
+            <a href="afinacao.html">Acessar afinação de guitarra</a> você aprende a afinar sua guitarra.<br><br>
+            <a href="manutencao.html">Acessar manutenção</a> sobre manutenção de instrumentos.<br><br>
+            <a href="blog.html" target="_blank">Acesar o blog</a> para ler nosso blog.
+        </aside>
     </main>
 </body>
 </html>

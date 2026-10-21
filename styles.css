@@ -129,7 +129,6 @@
     display: flex;
     justify-content: center;
     width: 80%;
-    height: 100%;
     
     & form{
       width: 100%;
@@ -139,15 +138,25 @@
 
       padding: 20px;
 
-      & input, select{
-        width: 50%;
+       & legend{
+        font-size: 30px;
+        font-weight: 500;
+      }
+
+      & fieldset{
+        padding: 20px;
+        border: 1px solid lightgray;
+        border-radius: 8px;
+        width: 100%;
       }
 
       & button{
-        width: 300px;
-        height: 40px;
+        width: 20%;
+        height: 30px;
         border-radius: 10px;
-        border: 1px solid black;
+        border: none;
+        background-color: var(--cor-texto-erro);
+        color: white;
       }
     }
   }
@@ -168,6 +177,15 @@
     }
   }
 
+  .campo{
+    & input{
+      width: 80%;
+    }
+  }
+  #divDadosContato{
+    display: flex;
+    flex-direction: column;
+  }
   #divInteresses{
     display: flex;
     flex-direction: column;
@@ -176,7 +194,7 @@
 
   #divAceiteTermos{
     display: flex;
-
+    width: 50%;
     & input{
       width: 15px;
       height: 15px;
