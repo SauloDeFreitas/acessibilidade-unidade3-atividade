@@ -46,6 +46,7 @@ function verificarCampo(campo){
 
     if(cam.value <= 0){
         erro.textContent = "Preencha o campo!"
+        cam.setAttribute('aria-invalid', 'true')
     }
 
     else{
@@ -56,5 +57,35 @@ function verificarCampo(campo){
             }
         }
         erro.textContent = ""
+        cam.removeAttribute('aria-invalid', 'true')
     }
+}
+
+function verificarTermos(campo){
+    const cam = document.getElementById(campo)
+    const erro = document.getElementById('erro_aceiteTermos')
+
+    if(!cam.checked){
+        erro.textContent = "Aceite os termos"
+    }
+    else{
+        erro.textContent = ""
+    }
+}
+
+function verificarForm(){
+    const campos = querySelectorAll('[required]');
+    const primeiroCampoInvalido = false 
+
+    campos.forEach(campo => {
+        if (campo.validity.valueMissing) {
+        campo.setAttribute('aria-invalid', 'true');
+        
+        if (!primeiroCampoInvalido) {
+            primeiroCampoInvalido = campo;
+        }
+        } else {
+            campo.removeAttribute('aria-invalid');
+        }
+    })
 }

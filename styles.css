@@ -155,6 +155,11 @@
       border: 1px solid lightgray;
       border-radius: 8px;
       width: 100%;
+
+      & input{
+        width: 100%;
+        text-align: center;
+      }
     }
 
     & button {

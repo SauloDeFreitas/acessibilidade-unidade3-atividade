@@ -33,58 +33,68 @@
     </header>
     <main id="mainContato">
         <form>
+            <div id="resumoDeErro" role="alert" hidden>
+
+            </div>
             <fieldset id="divDadosContato">
                 <legend>Formulário de Contato</legend>
                 <div class="campo">
                     <label for="nomeContato">Nome Completo</label>
-                    <input onfocusout="verificarCampo('nomeContato')" id="nomeContato" type="text" required>
+                    <input aria-describedby="erroNome" onfocusout="verificarCampo('nomeContato')" id="nomeContato" type="text" required>
                     <p class="erro" id="erro_nomeContato"></p>
+                    <span id="erroNome" class="erro" hidden>Por favor, insira um nome válido.</span>
                 </div>
                 <div class="campo">
                     <label for="emailContato">E-mail</label>
-                    <input onfocusout="verificarCampo('emailContato')" id="emailContato" type="email" required>
+                    <input aria-describedby="erroEmail" onfocusout="verificarCampo('emailContato')" id="emailContato" type="email" required>
                     <p class="erro" id="erro_emailContato"></p>
+                    <span id="erroEmail" class="erro" hidden>Por favor, insira um e-mail válido.</span>
                 </div>
                 <div class="campo">
                     <label for="cpfContato">CPF</label>
-                    <input onfocusout="verificarCampo('cpfContato')" id="cpfContato" type="number" required>
+                    <input aria-describedby="erroCpf" onfocusout="verificarCampo('cpfContato')" id="cpfContato" type="number" required>
                     <p class="erro" id="erro_cpfContato"></p>
+                    <span id="erroCpf" class="erro" hidden>Por favor, insira um CPF válido.</span>
                 </div>
                 <div class="campo">
                     <label for="dataContato">Data de Nascimento</label>
-                    <input onfocusout="verificarCampo('dataContato')" id="dataContato" type="date" required>
+                    <input aria-describedby="erroData" onfocusout="verificarCampo('dataContato')" id="dataContato" type="date" required>
                     <p class="erro" id="erro_dataContato"></p>
+                    <span id="erroData" class="erro" hidden>Por favor, insira uma data válida.</span>
                 </div>
                 <div class="campo">
                     <label for="telefoneContato">Telefone</label>
-                    <input onfocusout="verificarCampo('telefoneContato')" id="telefoneContato" type="tel">
+                    <input aria-describedby="erroTelefone" onfocusout="verificarCampo('telefoneContato')" id="telefoneContato" type="tel">
                     <p class="erro" id="erro_telefoneContato"></p>
+                    <span id="erroTelefone" class="erro" hidden>Por favor, insira um telefone válido.</span>
                 </div>
                 <div class="campo">
                     <label for="senhaContato">Senha</label>
-                    <input onfocusout="verificarCampo('senhaContato')" id="senhaContato" type="password">
+                    <input aria-describedby="erroSenha" onfocusout="verificarCampo('senhaContato')" id="senhaContato" type="password">
                     <p class="erro" id="erro_senhaContato"></p>
+                    <span id="erroSenha" class="erro" hidden>Por favor, insira uma senha válida.</span>
                 </div>
                 <div class="campo">
                     <label for="confSenhaContato">Confirmação da Senha</label>
-                    <input  onfocusout="verificarCampo('confSenhaContato')" id="confSenhaContato" type="password">
+                    <input aria-describedby="erroSenhaConf" onfocusout="verificarCampo('confSenhaContato')" id="confSenhaContato" type="password">
                     <p class="erro" id="erro_confSenhaContato"></p>
+                    <span id="erroSenhaConf" class="erro" hidden>As senhas precisam ser iguais.</span>
                 </div>
             </fieldset>
             <fieldset id="divisaoGeneroForm">
                 <legend>Gênero</legend>
                 <label for="masculino">Masculino</label>
-                <input onfocusout="verificarCampo('masculino')" id="masculino" type="radio" name="genero">
+                <input  id="masculino" type="radio" name="genero">
                 <label for="feminino">Feminino</label>
-                <input onfocusout="verificarCampo('feminino')" id="feminino" type="radio" name="genero">
+                <input  id="feminino" type="radio" name="genero">
             </fieldset>
             <fieldset id="divInteresses">
                 <legend>Interesses</legend>
-                <label>x</label>
+                <label>Produtos e Instrumentos</label>
                 <input type="checkbox">
-                <label>y</label>
+                <label>Aulas e Cursos</label>
                 <input type="checkbox">
-                <label>z</label>
+                <label>Assistência Técnica e Manutenção</label>
                 <input type="checkbox">
             
                 <legend>Como Conheceu o Site</legend>
@@ -98,12 +108,15 @@
 
                 <label for="mensagemContato">Mensagem</label>
                 <textarea onfocusout="verificarCampo('mensagemContato')" id="mensagemContato">
-
+                
                 </textarea>
+                <p class="erro" id="erro_mensagemContato"></p>
             </fieldset>
             <fieldset id="divAceiteTermos">
                 <label for="aceiteTermos">Aceite os Termos</label>
-                <input onfocusout="verificarCampo('aceiteTermos')" id="aceiteTermos" type="checkbox" required>
+                <input onfocusout="verificarTermos('aceiteTermos')" id="aceiteTermos" type="checkbox" required>
+                
+                <p class="erro" id="erro_aceiteTermos"></p>
             </fieldset>
 
             <!--Honeypot ou campo antispam-->
@@ -111,7 +124,7 @@
                 <input type="text" id="website" name="website" autocomplete="off">
             </div>
 
-            <button type="submit">Enviar</button>
+            <button onsubmit="verificarForm()"  type="submit">Enviar</button>
         </form>
         <aside class="lateral">
             <div style="font-weight:700; margin-bottom:8px;">Conteúdo relacionado</div>
