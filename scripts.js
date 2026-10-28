@@ -39,3 +39,22 @@ function moverCarrosselDireita(){
         indiceAtual -= 1
     }
 }
+
+function verificarCampo(campo){
+    const cam = document.getElementById(campo)
+    const erro = document.getElementById('erro_' + campo)
+
+    if(cam.value <= 0){
+        erro.textContent = "Preencha o campo!"
+    }
+
+    else{
+        if(cam.type == "email"){
+            if(!cam.checkValidity()){
+                erro.textContent = "Preencha o campo!"
+                return
+            }
+        }
+        erro.textContent = ""
+    }
+}

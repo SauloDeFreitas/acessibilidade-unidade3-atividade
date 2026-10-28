@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Cadastro Acessível</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
 </head>
 <body id="bodyContato">
     <header>
@@ -36,45 +37,46 @@
                 <legend>Formulário de Contato</legend>
                 <div class="campo">
                     <label for="nomeContato">Nome Completo</label>
-                    <input id="nomeContato" type="text" required>
-                    <p class="erro" id="erroNome"></p>
+                    <input onfocusout="verificarCampo('nomeContato')" id="nomeContato" type="text" required>
+                    <p class="erro" id="erro_nomeContato"></p>
                 </div>
                 <div class="campo">
                     <label for="emailContato">E-mail</label>
-                    <input id="emailContato" type="email" required>
-                    <p class="erro" id="erroEmail"></p>
+                    <input onfocusout="verificarCampo('emailContato')" id="emailContato" type="email" required>
+                    <p class="erro" id="erro_emailContato"></p>
                 </div>
                 <div class="campo">
                     <label for="cpfContato">CPF</label>
-                    <input id="cpfContato" type="number" required>
-                    <p class="erro" id="erroCpf"></p>
+                    <input onfocusout="verificarCampo('cpfContato')" id="cpfContato" type="number" required>
+                    <p class="erro" id="erro_cpfContato"></p>
                 </div>
                 <div class="campo">
                     <label for="dataContato">Data de Nascimento</label>
-                    <input id="dataContato" type="date" required>
-                    <p class="erro" id="erroNascimento"></p>
+                    <input onfocusout="verificarCampo('dataContato')" id="dataContato" type="date" required>
+                    <p class="erro" id="erro_dataContato"></p>
                 </div>
                 <div class="campo">
                     <label for="telefoneContato">Telefone</label>
-                    <input id="telefoneContato" type="tel">
-                    <p class="erro" id="erroTelefone"></p>
+                    <input onfocusout="verificarCampo('telefoneContato')" id="telefoneContato" type="tel">
+                    <p class="erro" id="erro_telefoneContato"></p>
                 </div>
                 <div class="campo">
                     <label for="senhaContato">Senha</label>
-                    <input id="senhaContato" type="password">
-                    <p class="erro" id="erroSenha"></p>
+                    <input onfocusout="verificarCampo('senhaContato')" id="senhaContato" type="password">
+                    <p class="erro" id="erro_senhaContato"></p>
                 </div>
                 <div class="campo">
                     <label for="confSenhaContato">Confirmação da Senha</label>
-                    <input id="confSenhaContato" type="password">
-                    <p class="erro" id="erroSenhaConf"></p>
+                    <input  onfocusout="verificarCampo('confSenhaContato')" id="confSenhaContato" type="password">
+                    <p class="erro" id="erro_confSenhaContato"></p>
                 </div>
             </fieldset>
             <fieldset id="divisaoGeneroForm">
+                <legend>Gênero</legend>
                 <label for="masculino">Masculino</label>
-                <input id="masculino" type="radio" name="genero">
+                <input onfocusout="verificarCampo('masculino')" id="masculino" type="radio" name="genero">
                 <label for="feminino">Feminino</label>
-                <input id="feminino" type="radio" name="genero">
+                <input onfocusout="verificarCampo('feminino')" id="feminino" type="radio" name="genero">
             </fieldset>
             <fieldset id="divInteresses">
                 <legend>Interesses</legend>
@@ -95,14 +97,19 @@
                 </select>
 
                 <label for="mensagemContato">Mensagem</label>
-                <textarea id="mensagemContato">
+                <textarea onfocusout="verificarCampo('mensagemContato')" id="mensagemContato">
 
                 </textarea>
             </fieldset>
             <fieldset id="divAceiteTermos">
                 <label for="aceiteTermos">Aceite os Termos</label>
-                <input id="aceiteTermos" type="checkbox" required>
+                <input onfocusout="verificarCampo('aceiteTermos')" id="aceiteTermos" type="checkbox" required>
             </fieldset>
+
+            <!--Honeypot ou campo antispam-->
+            <div style="display: none !important;">
+                <input type="text" id="website" name="website" autocomplete="off">
+            </div>
 
             <button type="submit">Enviar</button>
         </form>
