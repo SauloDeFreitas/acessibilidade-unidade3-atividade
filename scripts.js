@@ -47,17 +47,20 @@ function verificarCampo(campo){
     if(cam.value <= 0){
         erro.textContent = "Preencha o campo!"
         cam.setAttribute('aria-invalid', 'true')
+        cam.style.border = "2px solid red"
     }
 
     else{
         if(cam.type == "email"){
             if(!cam.checkValidity()){
                 erro.textContent = "Preencha o campo!"
+                cam.style.border = "2px solid red"
                 return
             }
         }
         erro.textContent = ""
         cam.removeAttribute('aria-invalid', 'true')
+        cam.style.border = "1px solid gray"
     }
 }
 
@@ -79,6 +82,10 @@ function verificarForm() {
     
     alerta.innerHTML = ""; 
     let primeiroCampoInvalido = null;
+
+    const titulo = document.createElement('h1')
+    titulo.textContent = "Corrija os campos abaixo: "
+    alerta.appendChild(titulo)
 
     campos.forEach(campo => {
         if (campo.validity.valueMissing) {
@@ -103,7 +110,6 @@ function verificarForm() {
     });
 
     if (primeiroCampoInvalido) {
-        alerta.style.display = "block";
         alerta.className = "alertaForm";
 
         alerta.setAttribute('tabindex', '-1');
@@ -111,9 +117,5 @@ function verificarForm() {
         setTimeout(() => {
             alerta.focus();
         }, 10);
-
-        setTimeout(() => {
-            alerta.style.display = "none";
-        }, 5000);
     }
 }
