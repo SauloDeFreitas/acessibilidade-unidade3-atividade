@@ -73,19 +73,47 @@ function verificarTermos(campo){
     }
 }
 
-function verificarForm(){
-    const campos = querySelectorAll('[required]');
-    const primeiroCampoInvalido = false 
+function verificarForm() {
+    const campos = document.querySelectorAll('[required]');
+    const alerta = document.getElementById("alertaForm");
+    
+    alerta.innerHTML = ""; 
+    let primeiroCampoInvalido = null;
 
     campos.forEach(campo => {
         if (campo.validity.valueMissing) {
-        campo.setAttribute('aria-invalid', 'true');
-        
-        if (!primeiroCampoInvalido) {
-            primeiroCampoInvalido = campo;
-        }
+            campo.setAttribute('aria-invalid', 'true');
+
+            if (!primeiroCampoInvalido) {
+                primeiroCampoInvalido = campo;
+            }
+
+            const textoErro = document.createElement("a");
+            textoErro.href = "#" + campo.id;
+            textoErro.className = "alertaTexto";
+            
+            const nomeLabel = campo.labels && campo.labels[0] ? campo.labels[0].innerText : campo.placeholder || campo.id;
+            textoErro.textContent = "Verifique o campo: " + nomeLabel; 
+
+            alerta.appendChild(textoErro);
+            alerta.append(document.createElement('br'));
         } else {
             campo.removeAttribute('aria-invalid');
         }
-    })
+    });
+
+    if (primeiroCampoInvalido) {
+        alerta.style.display = "block";
+        alerta.className = "alertaForm";
+
+        alerta.setAttribute('tabindex', '-1');
+        
+        setTimeout(() => {
+            alerta.focus();
+        }, 10);
+
+        setTimeout(() => {
+            alerta.style.display = "none";
+        }, 5000);
+    }
 }
