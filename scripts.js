@@ -55,12 +55,13 @@ function verificarCampo(campo){
             if(!cam.checkValidity()){
                 erro.textContent = "Preencha o campo!"
                 cam.style.border = "2px solid red"
+                cam.style.borderRadius = "5px"
                 return
             }
         }
         erro.textContent = ""
         cam.removeAttribute('aria-invalid', 'true')
-        cam.style.border = "1px solid gray"
+        cam.style.border = "1px solid #c3c9d6"
     }
 }
 

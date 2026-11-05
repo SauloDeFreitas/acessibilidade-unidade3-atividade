@@ -39,18 +39,21 @@
                 <div class="campo">
                     <label for="nomeContato">Nome Completo</label>
                     <input aria-describedby="erroNome" onfocusout="verificarCampo('nomeContato')" id="nomeContato" type="text" required>
+                    <p class="dica">Informe o nome completo</p>
                     <p class="erro" id="erro_nomeContato"></p>
                     <span id="erroNome" class="erro" hidden>Por favor, insira um nome válido.</span>
                 </div>
                 <div class="campo">
                     <label for="emailContato">E-mail</label>
                     <input aria-describedby="erroEmail" onfocusout="verificarCampo('emailContato')" id="emailContato" type="email" required>
+                    <p class="dica">Exemplo:nome@dominio.com</p>
                     <p class="erro" id="erro_emailContato"></p>
                     <span id="erroEmail" class="erro" hidden>Por favor, insira um e-mail válido.</span>
                 </div>
                 <div class="campo">
                     <label for="cpfContato">CPF</label>
                     <input aria-describedby="erroCpf" onfocusout="verificarCampo('cpfContato')" id="cpfContato" type="number" required>
+                    <p class="dica">Informe o CPF completo</p>
                     <p class="erro" id="erro_cpfContato"></p>
                     <span id="erroCpf" class="erro" hidden>Por favor, insira um CPF válido.</span>
                 </div>
@@ -63,12 +66,14 @@
                 <div class="campo">
                     <label for="telefoneContato">Telefone</label>
                     <input aria-describedby="erroTelefone" onfocusout="verificarCampo('telefoneContato')" id="telefoneContato" type="tel">
+                    <p class="dica">Campo opcional. Inclua o DDD</p>
                     <p class="erro" id="erro_telefoneContato"></p>
                     <span id="erroTelefone" class="erro" hidden>Por favor, insira um telefone válido.</span>
                 </div>
                 <div class="campo">
                     <label for="senhaContato">Senha</label>
                     <input aria-describedby="erroSenha" onfocusout="verificarCampo('senhaContato')" id="senhaContato" type="password">
+                    <p class="dica">A senha deve possuir 8 caracteres</p>
                     <p class="erro" id="erro_senhaContato"></p>
                     <span id="erroSenha" class="erro" hidden>Por favor, insira uma senha válida.</span>
                 </div>
