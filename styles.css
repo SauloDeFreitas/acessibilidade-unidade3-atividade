@@ -156,7 +156,7 @@
       border-radius: 8px;
       width: 100%;
 
-      & input, select, textarea{
+      & select, textarea{
         width: 100%;
         border: 1px solid #c3c9d6;
         border-radius: 2px;
@@ -191,6 +191,8 @@
 
   & input {
     grid-column: 2;
+    width: 20px;
+    background-color: red;
   }
 }
 
@@ -207,12 +209,25 @@
 
 #divAceiteTermos {
   display: flex;
+  flex-direction: column;
   width: 50%;
 
-  & input {
-    width: 15px;
-    height: 15px;
+  & section{
+    display: flex;
+    width: 40%;
+    margin-bottom: 10px;
+    align-items: center;
+
+    & input {
+      width: 15px;
+      height: 15px;
+    }
+
+    & label{
+      width: 100%;
+    }
   }
+  
 }
 
 body {
@@ -385,6 +400,14 @@ h6 {
   font-weight: 700;
 }
 
+.campo{
+  & input{
+    width: 100%;
+    border: 1px solid #c3c9d6;
+    border-radius: 5px;
+    padding: 10px;
+  }
+}
 .cartao {
   border: 1px solid #e0e4ee;
   border-radius: 8px;
