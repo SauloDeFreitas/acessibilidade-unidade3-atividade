@@ -41,6 +41,7 @@
 .slides {
   display: flex;
   gap: 20px;
+  width: 800px;
 
   & img {
     width: 250px;
@@ -140,7 +141,6 @@
 #mainContato {
   display: flex;
   justify-content: center;
-  width: 80%;
 
   & form {
     width: 100%;
@@ -368,6 +368,22 @@ body {
   min-width: 0;
 }
 
+#lateralContato{
+  flex: 0 0 250px;
+  background: var(--cor-fundo);
+  border: 1px solid #e0e4ee;
+  padding: 16px;
+  margin-top:50px;
+  border-radius: 8px;
+  font-size: 14px;
+  height: 250px;
+  color: var(--cor-texto-corpo);
+
+  & a {
+    color: var(--cor-texto-links);
+  }
+}
+
 .lateral {
   flex: 0 0 250px;
   background: var(--cor-fundo);
@@ -570,6 +586,15 @@ a {
 
 
 @media (max-width: 650px) {
+  #bodyContato{
+    & legend{
+      font-size: var(--tamanhoH1Responsivo);
+    }
+
+    & label{
+      font-size: var(--tamanhoTextosResponsivos)
+    }
+  }
   #banner{
     width: 250px;
   }
