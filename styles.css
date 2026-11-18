@@ -14,7 +14,8 @@
   --cor-texto-trilha: black;
   --cor-texto-erro: #c0392b;
 
-  --tamanhoTextosResponsivos:25px;
+  --tamanhoTextosResponsivos:15px;
+  --tamanhoH1Responsivo: 25px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -479,6 +480,7 @@ input[type=password] {
   padding: 24px;
   font-size: 13px;
   margin-top: 10px;
+  
 }
 
 #rodape ul {
@@ -488,6 +490,7 @@ input[type=password] {
 
 #rodape ul li {
   padding: 5px;
+  list-style-type: none;
 }
 
 #rodape a {
@@ -559,6 +562,10 @@ a {
   #banner{
     width: 350px;
   }
+  #mainContato{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 
@@ -569,7 +576,11 @@ a {
 }
 
 @media (max-width: 550px) {
+  
   body{
+    & h1{
+      font-size: var(--tamanhoH1Responsivo);
+    }
 
     & p, span, td, th, li, a{
       font-size: var(--tamanhoTextosResponsivos)
@@ -583,12 +594,12 @@ a {
 
   #sectionBanner{
     display: flex;
-    justify-content: center;
     width: 100%;
-    height: 400px;
+    height: 250px;
   }
   #banner{
-    width: 900px;
+    width:400px;
+    height: 250px;
   }
   html{
     width: 100%;
@@ -599,6 +610,19 @@ a {
     width: 100%;
   }
   
+  #rodape{
+    & ul{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: justify;
+      text-align: center;
+    }
+
+    & ul li{
+      width: 500px;
+    }
+  }
 }
 
 
