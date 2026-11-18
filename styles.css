@@ -41,7 +41,6 @@
 .slides {
   display: flex;
   gap: 20px;
-  width: 800px;
 
   & img {
     width: 250px;
