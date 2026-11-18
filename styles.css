@@ -13,6 +13,8 @@
   --cor-texto-rodape: white;
   --cor-texto-trilha: black;
   --cor-texto-erro: #c0392b;
+
+  --tamanhoTextosResponsivos:25px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,6 +35,7 @@
   overflow: hidden;
   width: 40%;
 }
+
 
 .slides {
   display: flex;
@@ -60,6 +63,7 @@
 #banner {
   transition: 1.5s ease;
   opacity: 1;
+  width: 500px;
 }
 
 @starting-style {
@@ -244,6 +248,7 @@ body {
   background: #fff;
 }
 
+
 .listaInstrumentos {
   margin-left: 2.5%;
 }
@@ -254,6 +259,7 @@ body {
   padding: 18px 24px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  width: 100%;
 }
 
 #topo sub {
@@ -548,3 +554,54 @@ a {
   font-size: 13px;
   color: #5b6478;
 }
+
+@media (max-width: 800px) {
+  #banner{
+    width: 350px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  #banner{
+    width: 250px;
+  }
+}
+
+@media (max-width: 550px) {
+  body{
+
+    & p, span, td, th, li, a{
+      font-size: var(--tamanhoTextosResponsivos)
+    }
+    
+  }
+  #miolo{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #sectionBanner{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+  }
+  #banner{
+    width: 900px;
+  }
+  html{
+    width: 100%;
+    display: flex;
+  }
+
+  aside{
+    width: 100%;
+  }
+  
+}
+
+
+
+
+
